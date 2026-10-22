@@ -1,0 +1,714 @@
+<!DOCTYPE html>
+<html lang="es" data-theme="light">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>IUS ÉTICA · Inteligencia Artificial, Ética y Orientación Jurídica</title>
+  <meta name="description" content="Plataforma interactiva y skill jurídico-ético para resolver dudas ciudadanas y profesionales sobre inteligencia artificial y derecho en lenguaje claro.">
+  <link rel="stylesheet" href="css/styles.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220%22 100%22><text y=%22.9em%22 font-size=%2290%22>⚖️</text></svg>">
+</head>
+<body>
+
+  <!-- ========================================================================
+       BARRA DE NAVEGACIÓN PRINCIPAL
+       ======================================================================== -->
+  <header class="site-header">
+    <div class="container header-inner">
+      <div class="brand-area">
+        <div class="brand-emblem">⚖️</div>
+        <div class="brand-text-block">
+          <span class="brand-title" data-i18n="brandTitle">IUS ÉTICA</span>
+          <span class="brand-subtitle" data-i18n="brandSubtitle">Tecnología con criterio · Derecho con conciencia</span>
+        </div>
+      </div>
+
+      <nav class="site-nav">
+        <ul>
+          <li><a href="#inicio" class="nav-link" data-i18n="navHome">Inicio</a></li>
+          <li><a href="#orientador" class="nav-link" data-i18n="navSkill">Orientador IA</a></li>
+          <li><a href="#principios" class="nav-link" data-i18n="navPrinciples">Principios</a></li>
+          <li><a href="#infografia" class="nav-link" data-i18n="navInfographic">Infografía Oficial</a></li>
+          <li><a href="#laboratorio" class="nav-link" data-i18n="navLab">Laboratorio</a></li>
+          <li><a href="#semaforo" class="nav-link" data-i18n="navRisk">Semáforo</a></li>
+          <li><a href="#glosario" class="nav-link" data-i18n="navGlossary">Glosario & Leyes</a></li>
+        </ul>
+      </nav>
+
+      <div class="header-controls">
+        <!-- Selector Multilingüe (ES / EN / PT) -->
+        <div class="lang-selector-wrapper">
+          <select id="langSelector" class="lang-select" aria-label="Seleccionar Idioma">
+            <option value="es">🇪🇸 Español</option>
+            <option value="en">🇬🇧 English</option>
+            <option value="pt">🇧🇷 Português</option>
+          </select>
+        </div>
+
+        <!-- Selector Modo Oscuro / Claro -->
+        <button id="themeToggleBtn" class="theme-toggle-btn" aria-label="Cambiar Tema">
+          <span class="theme-icon">🌙</span>
+          <span class="theme-label" data-i18n="switchThemeDark">Modo Oscuro</span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <!-- ======================================================================
+         HERO SECTION
+         ====================================================================== -->
+    <section id="inicio" class="hero-section">
+      <div class="container hero-grid">
+        <div class="hero-content">
+          <div class="section-badge" data-i18n="heroBadge">✦ Plataforma Jurídico-Ética & Skill Interactivo</div>
+          <h1 class="hero-title" data-i18n="heroTitle">Inteligencia Artificial con Conciencia Jurídica</h1>
+          <p class="hero-description" data-i18n="heroDescription">
+            Una plataforma viva que une el Derecho, la Ética y la Tecnología para que la ciudadanía, estudiantes y profesionales conozcan sus derechos, verifiquen la información jurídica y tomen decisiones éticas y humanas en la era de los algoritmos.
+          </p>
+
+          <div class="hero-quote-card">
+            <span data-i18n="brandQuote">"Porque la justicia también se construye con tecnología, pero sobre todo, con personas. ♡"</span>
+          </div>
+
+          <div class="hero-actions">
+            <a href="#orientador" class="btn-primary" data-i18n="heroBtnStart">Consultar al Orientador</a>
+            <a href="#infografia" class="btn-secondary" data-i18n="heroBtnInfographic">Ver Infografía Oficial</a>
+            <a href="#laboratorio" class="btn-secondary" data-i18n="heroBtnLab">Explorar Casos Reales</a>
+          </div>
+
+          <div class="hero-stats-row">
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="stat1Number">4 Pasos</span>
+              <span class="stat-label" data-i18n="stat1Label">Metodología de Evaluación Ética</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="stat2Number">100%</span>
+              <span class="stat-label" data-i18n="stat2Label">Centrado en Supervisión Humana</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="stat3Number">3 Idiomas</span>
+              <span class="stat-label" data-i18n="stat3Label">Español · Inglés · Portugués</span>
+            </div>
+            <div class="stat-item">
+              <span class="stat-number" data-i18n="stat4Number">Colombia & Global</span>
+              <span class="stat-label" data-i18n="stat4Label">T-323/24 · AI Act · UNESCO</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero-visual">
+          <div class="hero-image-frame">
+            <img src="assets/hero_justicia_etica.jpg" alt="Ilustración Artística de Justicia y Ética de la Inteligencia Artificial" loading="eager">
+            <div class="hero-visual-badge">
+              <span>🌿</span>
+              <span><strong>Equilibrio y Dignidad:</strong> Tecnología con criterio, Derecho con conciencia.</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         LOS 4 PILARES DE DIFERENCIACIÓN
+         ====================================================================== -->
+    <section class="pillars-section">
+      <div class="container">
+        <div class="section-header">
+          <h2 class="section-title" data-i18n="pillarsTitle">Lo que hace diferente a IUS ÉTICA</h2>
+          <p class="section-subtitle" data-i18n="pillarsSubtitle">No es solo inteligencia artificial: es un enfoque integral que humaniza la tecnología.</p>
+        </div>
+
+        <div class="pillars-grid">
+          <div class="pillar-card">
+            <span class="pillar-icon">📖</span>
+            <h3 class="pillar-title" data-i18n="pillar1Title">1. Comprender</h3>
+            <p class="pillar-desc" data-i18n="pillar1Desc">Derecho explicado en un lenguaje claro, accesible y empático para todas las personas.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-icon">🔍</span>
+            <h3 class="pillar-title" data-i18n="pillar2Title">2. Verificar</h3>
+            <p class="pillar-desc" data-i18n="pillar2Desc">Fuentes identificables, jurisprudencia vigente y alertas ante posibles alucinaciones de la IA.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-icon">💡</span>
+            <h3 class="pillar-title" data-i18n="pillar3Title">3. Reflexionar</h3>
+            <p class="pillar-desc" data-i18n="pillar3Desc">Detección activa de sesgos algorítmicos, privacidad vulnerada y dilemas de justicia.</p>
+          </div>
+          <div class="pillar-card">
+            <span class="pillar-icon">🤝</span>
+            <h3 class="pillar-title" data-i18n="pillar4Title">4. Responsabilizar</h3>
+            <p class="pillar-desc" data-i18n="pillar4Desc">Decisiones informadas donde la tecnología asiste, pero el criterio humano decide.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SKILL ENGINE: ORIENTADOR JURÍDICO INTELIGENTE
+         ====================================================================== -->
+    <section id="orientador" class="skill-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="skillSectionBadge">Skill Jurídico-Ético Interactivo</div>
+          <h2 class="section-title" data-i18n="skillSectionTitle">Orientador Jurídico Inteligente</h2>
+          <p class="section-subtitle" data-i18n="skillSectionSubtitle">
+            Formula tu consulta ciudadana o dilema profesional. El motor evaluará el caso en 4 pasos rigurosos: Diagnóstico de Riesgo, Análisis Dimensional, Marco Normativo y Checklist de Mitigación.
+          </p>
+        </div>
+
+        <div class="skill-card-main">
+          <div class="skill-input-area">
+            <!-- Selector de Presets -->
+            <div class="preset-selector-block">
+              <label class="preset-label" data-i18n="skillPresetLabel">O selecciona una consulta de ejemplo:</label>
+              <div class="preset-chips-scroll">
+                <button type="button" class="preset-chip active" data-preset="laboral_salario" data-i18n="preset1Title">Falta de pago de salario</button>
+                <button type="button" class="preset-chip" data-preset="judicial_motivacion" data-i18n="preset2Title">Borrador de sentencia con ChatGPT</button>
+                <button type="button" class="preset-chip" data-preset="citas_alucinaciones" data-i18n="preset3Title">Citas jurisprudenciales inventadas</button>
+                <button type="button" class="preset-chip" data-preset="confidencialidad_chatbot" data-i18n="preset4Title">Contratos confidenciales en chatbot</button>
+                <button type="button" class="preset-chip" data-preset="sesgo_contratacion" data-i18n="preset5Title">Sesgo algorítmico en contratación</button>
+                <button type="button" class="preset-chip" data-preset="educacion_universidad" data-i18n="preset6Title">Uso de IA en tesis o universidad</button>
+              </div>
+            </div>
+
+            <!-- Entrada Libre -->
+            <div class="skill-textarea-wrapper">
+              <textarea id="skillCustomInput" class="skill-custom-textarea" rows="3" data-i18n-placeholder="skillInputPlaceholder" placeholder="Escribe aquí tu duda jurídica, caso laboral, duda procesal o dilema con herramientas de IA..."></textarea>
+              <div class="skill-actions-bar">
+                <span class="skill-disclaimer-text" data-i18n="skillDisclaimer">
+                  Nota importante: Esta herramienta es estrictamente educativa y de orientación preliminar. No sustituye la lectura de la norma vigente ni el consejo de un abogado o abogada.
+                </span>
+                <div style="display:flex; gap:0.65rem;">
+                  <button type="button" id="skillClearBtn" class="btn-secondary" data-i18n="skillBtnClear">Limpiar</button>
+                  <button type="button" id="skillEvaluateBtn" class="btn-primary" data-i18n="skillBtnEvaluate">Evaluar con Criterio Ético-Legal</button>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- INFORME DE 4 PASOS -->
+          <div id="skillReportContainer" class="evaluation-report-wrapper fade-in">
+            <div class="report-header-banner">
+              <div>
+                <span style="font-size:0.8rem; font-weight:700; color:var(--text-muted); text-transform:uppercase; letter-spacing:0.04em;">DIAGNÓSTICO DEL CASO</span>
+                <h3 id="evalCaseTitle" class="eval-case-title">Consulta Ciudadana: Falta de pago de salario</h3>
+              </div>
+              <div id="evalRiskBadge" class="risk-badge badge-moderate">NIVEL DE RIESGO: MODERADO</div>
+            </div>
+
+            <div class="report-steps-grid">
+              <!-- PASO 1 -->
+              <div class="step-box">
+                <div class="step-box-header">
+                  <div class="step-number-tag">1</div>
+                  <h4 class="step-box-title" data-i18n="evalStep1Title">1. Resumen Ejecutivo y Nivel de Riesgo</h4>
+                </div>
+                <p id="evalExecutiveSummary" class="executive-summary-text"></p>
+              </div>
+
+              <!-- PASO 2 -->
+              <div class="step-box">
+                <div class="step-box-header">
+                  <div class="step-number-tag">2</div>
+                  <h4 class="step-box-title" data-i18n="evalStep2Title">2. Análisis Dimensional (4 Ejes Fundamentales)</h4>
+                </div>
+                <div class="dimensions-grid">
+                  <div class="dimension-card">
+                    <div class="dim-header">
+                      <span class="dim-icon">🔒</span>
+                      <span class="dim-title" data-i18n="dim1Title">Privacidad y Confidencialidad</span>
+                    </div>
+                    <p id="dimConfidentialityText" class="dim-text"></p>
+                  </div>
+                  <div class="dimension-card">
+                    <div class="dim-header">
+                      <span class="dim-icon">👁️</span>
+                      <span class="dim-title" data-i18n="dim2Title">Transparencia y Explicabilidad</span>
+                    </div>
+                    <p id="dimTransparencyText" class="dim-text"></p>
+                  </div>
+                  <div class="dimension-card">
+                    <div class="dim-header">
+                      <span class="dim-icon">⚖️</span>
+                      <span class="dim-title" data-i18n="dim3Title">Igualdad y No Discriminación</span>
+                    </div>
+                    <p id="dimBiasText" class="dim-text"></p>
+                  </div>
+                  <div class="dimension-card">
+                    <div class="dim-header">
+                      <span class="dim-icon">👤</span>
+                      <span class="dim-title" data-i18n="dim4Title">Supervisión Humana (Human-in-the-loop)</span>
+                    </div>
+                    <p id="dimHumanOversightText" class="dim-text"></p>
+                  </div>
+                </div>
+              </div>
+
+              <!-- PASO 3 -->
+              <div class="step-box">
+                <div class="step-box-header">
+                  <div class="step-number-tag">3</div>
+                  <h4 class="step-box-title" data-i18n="evalStep3Title">3. Marco Normativo y Deontológico Aplicable</h4>
+                </div>
+                <ul id="evalLawsList" class="laws-list"></ul>
+              </div>
+
+              <!-- PASO 4 -->
+              <div class="step-box">
+                <div class="step-box-header">
+                  <div class="step-number-tag">4</div>
+                  <h4 class="step-box-title" data-i18n="evalStep4Title">4. Recomendaciones Prácticas y Checklist Interactivo</h4>
+                </div>
+                <div id="evalChecklistContainer" class="checklist-container"></div>
+              </div>
+            </div>
+
+            <!-- BOTONES DE ACCIÓN DEL INFORME -->
+            <div class="report-toolbar">
+              <button type="button" id="speechReportBtn" class="btn-secondary" title="Escuchar resumen en voz alta">
+                <span>🔊</span> <span data-i18n="btnListenSpeech">Escuchar Resumen</span>
+              </button>
+              <button type="button" id="copyReportBtn" class="btn-secondary" title="Copiar informe completo al portapapeles">
+                <span>📋</span> <span data-i18n="btnCopyReport">Copiar Informe Ético</span>
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEIS PRINCIPIOS ÉTICOS PARA USAR IA EN EL DERECHO
+         ====================================================================== -->
+    <section id="principios" class="principles-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="principlesBadge">La ética no es un extra, es la base</div>
+          <h2 class="section-title" data-i18n="principlesTitle">Seis Principios Fundamentales para la IA en el Derecho</h2>
+          <p class="section-subtitle" data-i18n="principlesSubtitle">Establecidos en la doctrina jurídica contemporánea, la Sentencia T-323 de 2024 y los consensos internacionales.</p>
+        </div>
+
+        <div class="principles-grid">
+          <div class="principle-card">
+            <span class="principle-number">01</span>
+            <h3 class="principle-title" data-i18n="pr1Title">1. Responsabilidad Humana</h3>
+            <p class="principle-desc" data-i18n="pr1Desc">Una persona responde siempre por el escrito, el concepto o la decisión judicial. «Lo hizo la máquina» nunca es una excusa válida ante la ley ni ante los clientes.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">02</span>
+            <h3 class="principle-title" data-i18n="pr2Title">2. Transparencia y Trazabilidad</h3>
+            <p class="principle-desc" data-i18n="pr2Desc">Informar con franqueza cuándo se usó IA, para qué tareas y con qué herramienta, garantizando el derecho de contradicción y la debida defensa.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">03</span>
+            <h3 class="principle-title" data-i18n="pr3Title">3. Verificación y Veracidad</h3>
+            <p class="principle-desc" data-i18n="pr3Desc">Comprobar minuciosamente cada norma, cita, artículo y fecha en fuentes oficiales primarias antes de usarlo. Una respuesta bien redactada puede ser completamente falsa.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">04</span>
+            <h3 class="principle-title" data-i18n="pr4Title">4. Confidencialidad y Datos</h3>
+            <p class="principle-desc" data-i18n="pr4Desc">Proteger el secreto profesional (Ley 1123/2007) y el régimen de protección de datos personales (Ley 1581/2012). Nunca subir información reservada a servidores públicos sin garantías.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">05</span>
+            <h3 class="principle-title" data-i18n="pr5Title">5. Igualdad y No Discriminación</h3>
+            <p class="principle-desc" data-i18n="pr5Desc">Revisar activamente que los algoritmos no reproduzcan sesgos históricos o prejuicios sistémicos que perjudiquen a mujeres, minorías o sectores vulnerables.</p>
+          </div>
+          <div class="principle-card">
+            <span class="principle-number">06</span>
+            <h3 class="principle-title" data-i18n="pr6Title">6. Criterio Propio y Accesibilidad</h3>
+            <p class="principle-desc" data-i18n="pr6Desc">La IA asiste la labor documental, pero no sustituye el razonamiento ni la empatía humana. Además, el derecho debe explicarse con lenguaje claro para empoderar a la ciudadanía.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         INFOGRAFÍA OFICIAL & EXPLORADOR INTERACTIVO
+         ====================================================================== -->
+    <section id="infografia" class="infographic-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="infographicBadge">Material Gráfico Oficial</div>
+          <h2 class="section-title" data-i18n="infographicTitle">Infografía: IUS ÉTICA</h2>
+          <p class="section-subtitle" data-i18n="infographicSubtitle">
+            Tecnología con conciencia jurídica: modelo integral para la comprensión ciudadana, formación universitaria y práctica legal.
+          </p>
+        </div>
+
+        <div class="infographic-viewer-grid">
+          <!-- Vista previa con apertura en modal -->
+          <div class="infographic-preview-frame">
+            <img id="infographicPreviewImg" src="assets/infografia_ius_etica.png" alt="Infografía Oficial IUS ÉTICA: Inteligencia Artificial, Ética y Orientación Jurídica">
+            <div class="infographic-overlay-hint">
+              <span class="hint-pill">🔍 Haz clic para ver en pantalla completa</span>
+            </div>
+          </div>
+
+          <!-- Explorador Interactivo en Tarjetas -->
+          <div class="infographic-explorer-card">
+            <div class="explorer-header">
+              <h3 class="explorer-title" data-i18n="infographicExplorerTitle">Explorador Interactivo de la Infografía</h3>
+              <p style="font-size:0.92rem; color:var(--text-muted); margin-top:0.35rem;">
+                Navega a través de las 5 secciones estructurales del modelo gráfico oficial:
+              </p>
+            </div>
+
+            <div class="info-tabs-nav">
+              <button type="button" class="info-tab-btn active" data-tab="problema" data-i18n="infographicTab1">¿Cuál es el problema?</button>
+              <button type="button" class="info-tab-btn" data-tab="propuesta" data-i18n="infographicTab2">La propuesta (5 Módulos)</button>
+              <button type="button" class="info-tab-btn" data-tab="principios" data-i18n="infographicTab3">Principios Éticos</button>
+              <button type="button" class="info-tab-btn" data-tab="dirigida" data-i18n="infographicTab4">¿A quién está dirigida?</button>
+              <button type="button" class="info-tab-btn" data-tab="diferencial" data-i18n="infographicTab5">Diferenciales</button>
+            </div>
+
+            <!-- Contenidos de las Tabs -->
+            <div id="tabContent_problema" class="info-tab-panel active">
+              <div class="info-box-item">
+                <h4 class="info-box-title">📖 Desconocimiento jurídico</h4>
+                <p class="info-box-text">Muchas personas no saben cuáles son sus derechos o encuentran difícil comprender las normas y procedimientos.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">⚠️ Riesgos de la IA</h4>
+                <p class="info-box-text">Puede generar información incorrecta, citar normas inexistentes (alucinaciones), reproducir sesgos o dar conclusiones con falsa seguridad.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">⚖️ Dilemas éticos</h4>
+                <p class="info-box-text">El uso desregulado de algoritmos puede afectar la privacidad, la igualdad, la autonomía y el debido proceso de las partes.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">👥 Distancia entre tecnología y personas</h4>
+                <p class="info-box-text">Una solución automatizada puede parecer eficiente, pero ignorar contextos sociales, económicos o humanos relevantes.</p>
+              </div>
+            </div>
+
+            <div id="tabContent_propuesta" class="info-tab-panel">
+              <div class="info-box-item">
+                <h4 class="info-box-title">1. Orientador jurídico inteligente</h4>
+                <p class="info-box-text">Responde tus dudas en lenguaje sencillo, con base en normas y posibles alternativas viables.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">2. Verificador jurídico</h4>
+                <p class="info-box-text">Muestra las fuentes oficiales (normas, sentencias y jurisprudencia) y advierte con franqueza cuando no hay certeza.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">3. Evaluador ético</h4>
+                <p class="info-box-text">Identifica los dilemas éticos y posibles sesgos de género o socioeconómicos en cada situación.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">4. Laboratorio de casos</h4>
+                <p class="info-box-text">Te permite analizar situaciones reales y comparar la asistencia de la IA con el razonamiento jurídico humano.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">5. Control humano y responsabilidad</h4>
+                <p class="info-box-text">Te indica con claridad cuándo es necesario acudir a un profesional y recuerda los límites infranqueables de la máquina.</p>
+              </div>
+            </div>
+
+            <div id="tabContent_principios" class="info-tab-panel">
+              <div class="info-box-item">
+                <h4 class="info-box-title">Transparencia, Veracidad & Privacidad</h4>
+                <p class="info-box-text">Informar cuándo interviene la IA, cotejar fuentes en bases oficiales primarias y salvaguardar los datos personales según la Ley 1581 de 2012.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">Justicia, Responsabilidad & Accesibilidad</h4>
+                <p class="info-box-text">Erradicar sesgos discriminatorios, responder siempre por las decisiones y traducir el derecho a un lenguaje inclusivo y comprensible para todos.</p>
+              </div>
+            </div>
+
+            <div id="tabContent_dirigida" class="info-tab-panel">
+              <div class="info-box-item">
+                <h4 class="info-box-title">👩‍💼 Ciudadanía</h4>
+                <p class="info-box-text">Personas que necesitan comprender sus derechos laborales, de salud o familiares y conocer posibles rutas de orientación pacífica.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">🎓 Estudiantes y docentes de Derecho</h4>
+                <p class="info-box-text">Para estudiar normas, contrastar jurisprudencia, evitar el plagio y desarrollar argumentos con pensamiento crítico.</p>
+              </div>
+              <div class="info-box-item">
+                <h4 class="info-box-title">⚖️ Profesionales jurídicos</h4>
+                <p class="info-box-text">Abogados litigantes y equipos legales que buscan apoyo en sus investigaciones documentales manteniendo intacto su deber de diligencia.</p>
+              </div>
+            </div>
+
+            <div id="tabContent_diferencial" class="info-tab-panel">
+              <div class="info-box-item">
+                <h4 class="info-box-title">🌟 Enfoque Humanista e Integral</h4>
+                <p class="info-box-text">"La IA puede ayudar a comprender el derecho, pero no debe reemplazar el criterio humano. En esta primera etapa, el enfoque está en estudiantes de Derecho y ciudadanos que necesiten orientación jurídica básica en Colombia."</p>
+              </div>
+            </div>
+
+            <div style="margin-top:1.5rem; display:flex; gap:0.75rem;">
+              <button type="button" id="openInfographicModalBtn" class="btn-primary" data-i18n="infographicOpenFull">Abrir en Pantalla Completa</button>
+              <a href="assets/infografia_ius_etica.png" download="Infografia_IUS_ETICA.png" class="btn-secondary" data-i18n="infographicDownload">Descargar Imagen HD</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- MODAL LIGHTBOX DE LA INFOGRAFÍA -->
+    <div id="infographicModal" class="modal-overlay" role="dialog" aria-modal="true">
+      <div class="modal-content-wrapper">
+        <button id="closeInfographicModalBtn" class="modal-close-btn" aria-label="Cerrar modal">&times;</button>
+        <img src="assets/infografia_ius_etica.png" alt="Infografía Oficial IUS ÉTICA ampliada">
+      </div>
+    </div>
+
+    <!-- ======================================================================
+         LABORATORIO DE CASOS REALES Y DILEMAS ÉTICOS
+         ====================================================================== -->
+    <section id="laboratorio" class="lab-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="labBadge">Casos Reales y Dilemas Prácticos</div>
+          <h2 class="section-title" data-i18n="labTitle">Laboratorio de Decisión Ética</h2>
+          <p class="section-subtitle" data-i18n="labSubtitle">Ponte a prueba ante situaciones reales ocurridas en juzgados y despachos. Toma tu postura y descubre la respuesta deontológica adecuada.</p>
+        </div>
+
+        <div class="lab-cases-grid">
+          <!-- CASO 1: MATA VS AVIANCA -->
+          <div class="lab-case-card">
+            <span class="lab-case-badge">Precedente Internacional</span>
+            <h3 class="lab-case-title" data-i18n="caseMataTitle">Caso Mata vs. Avianca (Corte Federal de EE.UU. 2023)</h3>
+            <p class="lab-case-context" data-i18n="caseMataContext">
+              Abogados litigantes usaron ChatGPT para fundamentar un recurso contra una aerolínea. La IA citó precedentes falsos con textos inventados ('Varghese v. China Southern Airlines'). Los abogados no cotejaron en bases de datos oficiales y presentaron el escrito firmado.
+            </p>
+            <h4 class="lab-question-title" data-i18n="caseMataQuestion">¿Cuál fue la consecuencia ético-jurídica correcta para este actuar?</h4>
+            <div class="quiz-options-list">
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="Incorrecto. El estándar universal de la abogacía exige verificar personalmente todo escrito firmado." data-i18n="caseMataOptA">
+                Ninguna sanción, pues la culpa fue de OpenAI por proveer datos alucinados.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="true" data-feedback="¡Exacto! El juez P. Kevin Castel multó a los letrados con $5,000 USD y ordenó notificar a sus clientes. El deber de diligencia nunca se delega." data-i18n="caseMataOptB">
+                Sanción económica y disciplinaria a los abogados por faltar al deber de diligencia y verificación profesional.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="Incorrecto. Presentar citas falsas atenta contra la buena fe procesal y engaña a la administración de justicia." data-i18n="caseMataOptC">
+                El juez debe aceptar el escrito si el fondo de la petición parecía coherente.
+              </button>
+            </div>
+            <div class="lab-feedback-box"></div>
+          </div>
+
+          <!-- CASO 2: SENTENCIA T-323 DE 2024 -->
+          <div class="lab-case-card">
+            <span class="lab-case-badge">Jurisprudencia Colombia</span>
+            <h3 class="lab-case-title" data-i18n="caseT323Title">Sentencia T-323 de 2024 (Corte Constitucional de Colombia)</h3>
+            <p class="lab-case-context" data-i18n="caseT323Context">
+              Un juez laboral de Cartagena acudió a ChatGPT para formularle preguntas sobre la exoneración de copagos a un menor con TEA. Aunque transcribió las respuestas en la sentencia, el juez realizó también un análisis jurisprudencial propio.
+            </p>
+            <h4 class="lab-question-title" data-i18n="caseT323Question">¿Qué determinó la Corte Constitucional colombiana frente a la actuación judicial?</h4>
+            <div class="quiz-options-list">
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="La Corte reconoció que las herramientas tecnológicas son válidas, siempre que se respeten los límites procesales y no reemplacen al juez." data-i18n="caseT323OptA">
+                Declaró ilegal cualquier uso de computadoras en la Rama Judicial.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="Totalmente falso. La Corte prohibió expresamente delegar la función de juzgar o motivar providencias en algoritmos." data-i18n="caseT323OptB">
+                Aprobó delegar la redacción de la parte resolutiva y de motivación en la IA.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="true" data-feedback="¡Correcto! La Corte fijó que la IA es una herramienta de auxilio, pero la motivación sustantiva es indelegable. Dictó directrices de transparencia, verificación y privacidad, base del Acuerdo PCSJA24-12243." data-i18n="caseT323OptC">
+                Concluyó que la IA puede servir de apoyo administrativo o documental, pero prohibió tajantemente sustituir el juicio humano y ordenó regular su uso con transparencia.
+              </button>
+            </div>
+            <div class="lab-feedback-box"></div>
+          </div>
+
+          <!-- DILEMA 1: CITA FANTASMA -->
+          <div class="lab-case-card">
+            <span class="lab-case-badge">Dilema Práctico 1</span>
+            <h3 class="lab-case-title" data-i18n="dilemma1Title">Dilema 1: La Cita Fantasma</h3>
+            <p class="lab-case-context" data-i18n="dilemma1Context">
+              Un sistema de IA te redacta un alegato impecable con una sentencia del Consejo de Estado que encaja exactamente con tu necesidad. Buscas en la relatoría oficial y el número de radicado no arroja ningún resultado.
+            </p>
+            <h4 class="lab-question-title" data-i18n="dilemma1Question">¿Qué decisión debes tomar?</h4>
+            <div class="quiz-options-list">
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="Citar sin verificar es inducir a error al despacho y compromete tu tarjeta profesional." data-i18n="dilemma1OptA">
+                Citarla igualmente, presumiendo que la relatoría estatal puede estar desactualizada.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="true" data-feedback="¡Acertado! Citar una alucinación induce a error a la autoridad y acarrea sanciones disciplinarias bajo la Ley 1123 de 2007 (falta a la lealtad y debida diligencia)." data-i18n="dilemma1OptB">
+                No utilizar la cita inventada. Buscar jurisprudencia real verificable y reformular el argumento con fuentes válidas.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="Falsificar o acomodar fechas agrava la falta ética y procesal." data-i18n="dilemma1OptC">
+                Cambiar la fecha de la cita para ver si el despacho no lo nota.
+              </button>
+            </div>
+            <div class="lab-feedback-box"></div>
+          </div>
+
+          <!-- DILEMA 2: EXPEDIENTE CONFIDENCIAL -->
+          <div class="lab-case-card">
+            <span class="lab-case-badge">Dilema Práctico 2</span>
+            <h3 class="lab-case-title" data-i18n="dilemma2Title">Dilema 2: Expediente en Chatbot Público</h3>
+            <p class="lab-case-context" data-i18n="dilemma2Context">
+              Tienes un expediente con historias clínicas, nombres y cuentas bancarias de una familia. Para ahorrar tiempo, deseas subir el archivo PDF completo a una versión gratuita de IA en la web.
+            </p>
+            <h4 class="lab-question-title" data-i18n="dilemma2Question">¿Es jurídicamente correcto proceder?</h4>
+            <div class="quiz-options-list">
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="La mayoría de chatbots gratuitos utilizan los textos ingresados para entrenar modelos públicos." data-i18n="dilemma2OptA">
+                Sí, las políticas de los chatbots garantizan que nadie lee lo que subes.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="true" data-feedback="¡Muy bien! Subir datos sensibles a servidores abiertos sin garantías de cifrado ni consentimiento vulnera el secreto profesional y expone la intimidad de los clientes." data-i18n="dilemma2OptB">
+                No. Vulnera el secreto profesional y la Ley 1581 de 2012 de Habeas Data. Debe anonimizarse totalmente o emplear plataformas privadas con acuerdo corporativo de confidencialidad.
+              </button>
+              <button type="button" class="quiz-option-btn" data-correct="false" data-feedback="La hora de subida no modifica las condiciones de privacidad ni de alojamiento de datos en la nube." data-i18n="dilemma2OptC">
+                Es válido si sólo se sube durante la noche cuando hay menos tráfico web.
+              </button>
+            </div>
+            <div class="lab-feedback-box"></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         SEMÁFORO DE RIESGO IA (AUDITORÍA RÁPIDA)
+         ====================================================================== -->
+    <section id="semaforo" class="risk-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="riskSectionBadge">Auditoría Rápida de Herramientas</div>
+          <h2 class="section-title" data-i18n="riskSectionTitle">Semáforo Ético y Evaluador de Riesgo IA</h2>
+          <p class="section-subtitle" data-i18n="riskSectionSubtitle">
+            Evalúa en 4 preguntas si tu caso de uso con IA cumple los estándares de la Ley Colombiana y el Reglamento de IA de la UE.
+          </p>
+        </div>
+
+        <div class="risk-calc-card">
+          <form id="riskForm" onsubmit="event.preventDefault();">
+            <div class="risk-questions-list">
+              <div class="risk-question-item">
+                <span class="risk-question-text" data-i18n="q1Label">1. ¿La herramienta procesa nombres, datos sensibles o información reservada de personas?</span>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="risk_q1" value="yes"> Sí</label>
+                  <label class="radio-label"><input type="radio" name="risk_q1" value="no" checked> No</label>
+                </div>
+              </div>
+
+              <div class="risk-question-item">
+                <span class="risk-question-text" data-i18n="q2Label">2. ¿La IA sugiere conclusiones que afectarán derechos fundamentales (empleo, libertad, salud, bienes)?</span>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="risk_q2" value="yes"> Sí</label>
+                  <label class="radio-label"><input type="radio" name="risk_q2" value="no" checked> No</label>
+                </div>
+              </div>
+
+              <div class="risk-question-item">
+                <span class="risk-question-text" data-i18n="q3Label">3. ¿Se informará transparentemente a los interesados que se utilizó IA para apoyar este proceso?</span>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="risk_q3" value="yes" checked> Sí</label>
+                  <label class="radio-label"><input type="radio" name="risk_q3" value="no"> No</label>
+                </div>
+              </div>
+
+              <div class="risk-question-item">
+                <span class="risk-question-text" data-i18n="q4Label">4. ¿Las fuentes, leyes y razonamientos fueron verificados por un profesional humano competente?</span>
+                <div class="radio-group">
+                  <label class="radio-label"><input type="radio" name="risk_q4" value="yes" checked> Sí</label>
+                  <label class="radio-label"><input type="radio" name="risk_q4" value="no"> No</label>
+                </div>
+              </div>
+            </div>
+
+            <div style="text-align:center;">
+              <button type="button" id="calculateRiskBtn" class="btn-primary" data-i18n="btnCalculateRisk">Calcular Semáforo Ético</button>
+            </div>
+          </form>
+
+          <div id="riskResultBox" class="risk-meter-display">
+            <div class="risk-meter-bar-track">
+              <div id="riskMeterFill" class="risk-meter-bar-fill"></div>
+            </div>
+            <div class="risk-result-content">
+              <h4 id="riskMeterTitle" class="risk-meter-title"></h4>
+              <p id="riskMeterDesc" class="risk-meter-desc"></p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ======================================================================
+         GLOSARIO EN LENGUAJE SIMPLE & MARCO REGULATORIO
+         ====================================================================== -->
+    <section id="glosario" class="glossary-section">
+      <div class="container">
+        <div class="section-header">
+          <div class="section-badge" data-i18n="glossaryBadge">Democratización del Conocimiento</div>
+          <h2 class="section-title" data-i18n="glossaryTitle">Glosario Jurídico en Lenguaje Simple</h2>
+          <p class="section-subtitle" data-i18n="glossarySubtitle">Los términos técnicos del derecho y la inteligencia artificial explicados de forma clara, amigable y comprensible.</p>
+        </div>
+
+        <div class="glossary-search-wrapper">
+          <input type="text" id="glossarySearchInput" class="glossary-search-input" data-i18n-placeholder="searchGlossaryPlaceholder" placeholder="Buscar término (ej. alucinación, caja negra, habeas data)...">
+        </div>
+
+        <div id="glossaryGrid" class="glossary-grid"></div>
+
+        <!-- MARCO NORMATIVO CITADO -->
+        <div style="margin-top: 4rem; padding-top: 3rem; border-top: 1px solid var(--border-subtle);">
+          <div class="section-header">
+            <div class="section-badge" data-i18n="lawsBadge">Marco Regulatorio Vigente</div>
+            <h3 class="section-title" data-i18n="lawsTitle">Referencias Normativas y Doctrinales</h3>
+            <p class="section-subtitle" data-i18n="lawsSubtitle">Fundamentos jurídicos que sustentan cada diagnóstico de IUS ÉTICA en Colombia y el mundo.</p>
+          </div>
+
+          <div style="display:grid; grid-template-columns:repeat(auto-fit, minmax(280px, 1fr)); gap:1.25rem;">
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">Sentencia T-323 de 2024</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Corte Constitucional de Colombia. Parámetros de uso de ChatGPT y prohibición de sustitución de jueces.</p>
+            </div>
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">Acuerdo PCSJA24-12243</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Consejo Superior de la Judicatura. Lineamientos obligatorios para el uso responsable de IA generativa en la Rama Judicial.</p>
+            </div>
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">Leyes 1123/2007 & 1581/2012</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Código Disciplinario del Abogado (diligencia y secreto profesional) y Régimen General de Protección de Datos Personales (Habeas Data).</p>
+            </div>
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">Reglamento (UE) 2024/1689 (AI Act)</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Clasificación de riesgos. Exigencias estrictas a sistemas de IA en administración de justicia y recursos humanos.</p>
+            </div>
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">UNESCO (2021) & CEPEJ (2018)</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Recomendación sobre la Ética de la IA y Carta Ética Europea sobre el uso de la IA en los sistemas judiciales.</p>
+            </div>
+            <div style="background:var(--bg-base); border:1px solid var(--border-subtle); border-radius:var(--border-radius-md); padding:1.25rem;">
+              <strong style="color:var(--accent-rose); font-size:1.05rem;">V Congreso Internacional de Ética</strong>
+              <p style="font-size:0.88rem; color:var(--text-muted); margin-top:0.4rem;">Ponencias sobre bioética algorítmica, dignidad humana y pensamiento crítico en la educación superior (2024).</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- ========================================================================
+       FOOTER
+       ======================================================================== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="brand-area">
+        <div class="brand-emblem">⚖️</div>
+        <span class="footer-brand-title">IUS ÉTICA</span>
+      </div>
+
+      <p class="footer-motto" data-i18n="footerMotto">Tecnología con criterio · Derecho con conciencia</p>
+      
+      <p class="footer-dedication" data-i18n="footerDedication">
+        Desarrollado con enfoque educativo, ético y humano para el libre acceso a la justicia y la dignidad digital.
+      </p>
+
+      <p class="footer-disclaimer" data-i18n="footerDisclaimer">
+        IUS ÉTICA es una plataforma educativa experimental. Las evaluaciones generadas no constituyen asesoría legal formal vinculante.
+      </p>
+
+      <p class="footer-rights" data-i18n="footerRights">Todos los derechos reservados © 2026 · IUS ÉTICA</p>
+    </div>
+  </footer>
+
+  <!-- Scripts -->
+  <script src="js/translations.js"></script>
+  <script src="js/skill_engine.js"></script>
+  <script src="js/app.js"></script>
+</body>
+</html>
